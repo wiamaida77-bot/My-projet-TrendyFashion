@@ -1,0 +1,535 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.explore-page {
+  background-color: #E8DFD4;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.navbar {
+  background-color: #E8DFD4;
+  border-bottom: 1px solid #D4C5B3;
+  padding: 16px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-button {
+  color: #3D2817;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.nav-button:hover {
+  opacity: 0.7;
+}
+
+.nav-button.active {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.login-button {
+  padding: 8px 24px;
+  border: 2px solid #8B5A3C;
+  color: #8B5A3C;
+  background: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  background-color: #8B5A3C;
+  color: white;
+}
+.explore-header {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.explore-title {
+  font-size: 56px;
+  font-weight: bold;
+  color: #3D2817;
+  font-family: serif;
+  margin-bottom: 16px;
+}
+
+.explore-subtitle {
+  font-size: 18px;
+  color: #6B5B4F;
+}
+.collection-section {
+  padding: 40px 0;
+}
+
+.collection-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #3D2817;
+  font-family: serif;
+  margin-bottom: 32px;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.collection-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.collection-card:hover .card-image {
+  transform: scale(1.05);
+}
+.card-content {
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3D2817;
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #8B5A3C;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rating-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3D2817;
+}
+.card-button {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #8B5A3C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.card-button:hover {
+  opacity: 0.9;
+}
+@media (max-width: 1024px) {
+  .explore-title {
+    font-size: 48px;
+  }
+
+  .collection-title {
+    font-size: 36px;
+  }
+
+  .card-image-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-button {
+    font-size: 12px;
+  }
+
+  .explore-title {
+    font-size: 42px;
+  }
+
+  .explore-subtitle {
+    font-size: 16px;
+  }
+
+  .collection-title {
+    font-size: 32px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card-image-wrapper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-header {
+    padding: 40px 0 20px;
+  }
+
+  .explore-title {
+    font-size: 32px;
+  }
+
+  .explore-subtitle {
+    font-size: 14px;
+  }
+
+  .collection-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .collection-section {
+    padding: 30px 0;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-price {
+    font-size: 24px;
+  }
+
+  .card-image-wrapper {
+    height: 250px;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.navbar {
+  background-color: #E8DFD4;
+  border-bottom: 1px solid #D4C5B3;
+  padding: 16px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-button {
+  color: #3D2817;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.nav-button:hover {
+  opacity: 0.7;
+}
+
+.nav-button.active {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.login-button {
+  padding: 8px 24px;
+  border: 2px solid #8B5A3C;
+  color: #8B5A3C;
+  background: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  background-color: #8B5A3C;
+  color: white;
+}
+.explore-header {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.explore-title {
+  font-size: 56px;
+  font-weight: bold;
+  color: #3D2817;
+  font-family: serif;
+  margin-bottom: 16px;
+}
+
+.explore-subtitle {
+  font-size: 18px;
+  color: #6B5B4F;
+}
+.collection-section {
+  padding: 40px 0;
+}
+
+.collection-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #3D2817;
+  font-family: serif;
+  margin-bottom: 32px;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.collection-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.collection-card:hover .card-image {
+  transform: scale(1.05);
+}
+.card-content {
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3D2817;
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #8B5A3C;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rating-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3D2817;
+}
+.card-button {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #8B5A3C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.card-button:hover {
+  opacity: 0.9;
+}
+@media (max-width: 1024px) {
+  .explore-title {
+    font-size: 48px;
+  }
+
+  .collection-title {
+    font-size: 36px;
+  }
+
+  .card-image-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-button {
+    font-size: 12px;
+  }
+
+  .explore-title {
+    font-size: 42px;
+  }
+
+  .explore-subtitle {
+    font-size: 16px;
+  }
+
+  .collection-title {
+    font-size: 32px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card-image-wrapper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-header {
+    padding: 40px 0 20px;
+  }
+
+  .explore-title {
+    font-size: 32px;
+  }
+
+  .explore-subtitle {
+    font-size: 14px;
+  }
+
+  .collection-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .collection-section {
+    padding: 30px 0;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-price {
+    font-size: 24px;
+  }
+
+  .card-image-wrapper {
+    height: 250px;
+  }
+}
